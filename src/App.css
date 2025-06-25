@@ -1,0 +1,89 @@
+/* App.css */
+:root {
+  --primary-50: #FFFDF5;
+  --primary-100: #FFFBE6;
+  --primary-200: #FFF7CC;
+  --primary-300: #FFF2A3;
+  --primary-400: #FFEA7A;
+  --primary-500: #FFE252;
+  --primary-600: #F9C22E;
+  --primary-700: #E5A515;
+  --primary-800: #CC8B0E;
+  --primary-900: #A36A09;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make sure images display properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Focus styles for accessibility */
+button:focus, a:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-in forwards;
+  opacity: 1; /* Ensure content is visible even before animation completes */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.2; /* Start with slight visibility */
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure elements are visible even if JavaScript is disabled */
+.fade-in:not(:root) {
+  opacity: 1 !important;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+} 
