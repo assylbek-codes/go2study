@@ -17,8 +17,10 @@ const LanguageSwitcher: React.FC = () => {
         return t('language.ru');
       case 'kk':
         return t('language.kk');
-      default:
+      case 'en':
         return t('language.en');
+      default:
+        return t('language.ru');
     }
   };
 
@@ -40,6 +42,12 @@ const LanguageSwitcher: React.FC = () => {
       {isOpen && (
         <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-50 border border-gray-200">
           <button 
+            onClick={() => changeLanguage('kk')} 
+            className={`block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 w-full text-left ${i18n.language === 'kk' ? 'bg-primary-50 text-primary-600' : ''}`}
+          >
+            {t('language.kk')}
+          </button>
+          <button 
             onClick={() => changeLanguage('en')} 
             className={`block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 w-full text-left ${i18n.language === 'en' ? 'bg-primary-50 text-primary-600' : ''}`}
           >
@@ -50,12 +58,6 @@ const LanguageSwitcher: React.FC = () => {
             className={`block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 w-full text-left ${i18n.language === 'ru' ? 'bg-primary-50 text-primary-600' : ''}`}
           >
             {t('language.ru')}
-          </button>
-          <button 
-            onClick={() => changeLanguage('kk')} 
-            className={`block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 w-full text-left ${i18n.language === 'kk' ? 'bg-primary-50 text-primary-600' : ''}`}
-          >
-            {t('language.kk')}
           </button>
         </div>
       )}

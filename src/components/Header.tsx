@@ -93,12 +93,12 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <button className="mt-2 bg-primary-500 text-gray-800 font-medium px-6 py-3 rounded-md hover:bg-primary-600 transition duration-300 w-full flex items-center justify-center">
+            {/* <button className="mt-2 bg-primary-500 text-gray-800 font-medium px-6 py-3 rounded-md hover:bg-primary-600 transition duration-300 w-full flex items-center justify-center">
               {t('nav.getStarted')}
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       )}
