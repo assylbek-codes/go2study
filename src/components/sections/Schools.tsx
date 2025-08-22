@@ -77,7 +77,7 @@ const Schools: React.FC = () => {
               {t('schools.cta.desc')}
             </p>
             <a
-              href="https://wa.me/77474682404"
+              href="https://wa.me/77753897233"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-green-500 text-white font-bold px-8 py-3 rounded-lg hover:bg-green-600 transition-colors duration-300"
