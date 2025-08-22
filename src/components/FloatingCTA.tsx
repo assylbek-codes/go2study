@@ -5,7 +5,7 @@ const FloatingCTA: React.FC = () => {
   const { t } = useTranslation();
   
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/77474682404', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.me/77753897233', '_blank', 'noopener,noreferrer');
   };
 
   return (
